@@ -1,0 +1,23 @@
+<div class="recipe-grid">
+    <div class="recipe-card" *ngFor="let recipe of recipes">
+      <img
+        class="recipe-card__image"
+        [src]="recipe.imageUrl"
+        [alt]="recipe.name"
+        onerror="this.src='assets/images/placeholder.jpg';"
+      />
+  
+      <div class="recipe-card__badges">
+      </div>
+  
+      <h3 class="recipe-card__title">{{ recipe.name }}</h3>
+      <p class="recipe-card__ingredients">Ingredients: {{ recipe.ingredients }}</p>
+
+  
+  
+      <div class="recipe-card__buttons">
+        <button class="button button--primary">Reviews</button>
+      </div>
+    </div>
+  </div>
+  
